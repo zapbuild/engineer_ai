@@ -1,0 +1,13 @@
+<h2>My Tweets</h2>
+<div>
+  <% if @my_tweets.present? %>
+    <% @my_tweets.each do |my_tweet| %>
+    <div> <%= my_tweet.title %></div>
+      <div> <%= my_tweet.description %></div>
+      <div> <%= my_tweet.created_at %></div><br/><br/>
+    <% end %>
+  <% else %>
+  <span> No Records Found</span>
+  <% end %>
+
+</div>

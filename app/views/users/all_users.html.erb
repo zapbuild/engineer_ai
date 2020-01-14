@@ -1,0 +1,31 @@
+<h2>All Users</h2>
+
+<span id="msg"></span>
+
+<table>
+  <thead>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Phone</th>
+  <th>Action</th>
+  </thead>
+  <% if @all_users.present? %>
+    <% @all_users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= link_to "Follow", follow_path(user_id: user.id), method: :post, remote: true    %></td>
+      </tr>
+    <% end %>
+  <% else %>
+
+    <tr><td>No Records Found</td></tr>
+
+  <% end %>
+
+  <tbody>
+
+
+  </tbody>
+</table>
