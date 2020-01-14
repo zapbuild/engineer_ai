@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get 'all_users', :to => 'users#all_users'
 
   post 'follow', :to => 'users#follow'
+
+  get 'my_profile', :to => 'users#my_profile'
 end

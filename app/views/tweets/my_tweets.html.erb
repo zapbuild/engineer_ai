@@ -2,9 +2,9 @@
 <div>
   <% if @my_tweets.present? %>
     <% @my_tweets.each do |my_tweet| %>
-    <div> <%= my_tweet.title %></div>
-      <div> <%= my_tweet.description %></div>
-      <div> <%= my_tweet.created_at %></div><br/><br/>
+    <div> Title: <%= my_tweet.title %></div>
+      <div> Description: <%= my_tweet.description %></div>
+      <div> Created Date: <%= my_tweet.created_at %></div><br/><br/>
     <% end %>
   <% else %>
   <span> No Records Found</span>

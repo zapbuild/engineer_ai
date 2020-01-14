@@ -1,0 +1,56 @@
+<h2>My followers</h2>
+<table>
+  <thead>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Phone</th>
+  </thead>
+  <% if @my_followers.present? %>
+    <% @my_followers.each do |my_follower| %>
+      <tr>
+        <td><%= my_follower.user.name %></td>
+        <td><%= my_follower.user.email %></td>
+        <td><%= my_follower.user.phone %></td>
+      </tr>
+    <% end %>
+  <% else %>
+
+    <tr><td>No Records Found</td></tr>
+
+  <% end %>
+
+  <tbody>
+
+
+  </tbody>
+</table>
+
+
+
+
+<h2>My followings</h2>
+<table>
+  <thead>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Phone</th>
+  </thead>
+  <% if @my_followings.present? %>
+    <% @my_followings.each do |my_follower| %>
+      <tr>
+        <td><%= my_follower.user.name %></td>
+        <td><%= my_follower.user.email %></td>
+        <td><%= my_follower.user.phone %></td>
+      </tr>
+    <% end %>
+  <% else %>
+
+    <tr><td>No Records Found</td></tr>
+
+  <% end %>
+
+  <tbody>
+
+
+  </tbody>
+</table>

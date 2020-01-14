@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :tweets
   has_many :followers
+  has_many :followings, :foreign_key => :follower_id, :class_name => "Follower"
+
 end

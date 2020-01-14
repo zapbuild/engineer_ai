@@ -31,4 +31,12 @@ class UsersController < ApplicationController
     end
 
   end
+
+  def my_profile
+    @my_followers = current_user.followers
+    @my_followings = current_user.followings
+
+  end
+
+
 end
